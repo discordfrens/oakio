@@ -67,7 +67,7 @@ func NewServer() {
 	s.MaxMessageBytes = 1024 * 1024
 	s.MaxRecipients = 50
 	s.AllowInsecureAuth = true
-	s.Debug = os.Stdout
+	// s.Debug = os.Stdout
 
 	log.Println("Starting server at", s.Addr)
 	if err := s.ListenAndServe(); err != nil {
