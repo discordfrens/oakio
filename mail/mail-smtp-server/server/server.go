@@ -44,7 +44,7 @@ func (s *Session) Data(r io.Reader) error {
 		return err
 	} else {
 		log.Println("Data:", string(b))
-		err = smtp.SendMail("mail.bun.red:143", nil, "hi@bun.red", []string{"saigeeees@gmail.com"}, r)
+		err = smtp.SendMail("smtp.gmail.com:587", nil, "hi@bun.red", []string{"saigeeees@gmail.com"}, r)
 	}
 	return nil
 }
