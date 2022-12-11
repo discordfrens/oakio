@@ -17,7 +17,7 @@ func Client() {
 	}
 
 	defer c.Close()
-	if err := c.Login("username", "password"); err != nil {
+	if err := c.Login("hi@bun.red", "password"); err != nil {
 		log.Fatal(err)
 	}
 
