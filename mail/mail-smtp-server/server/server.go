@@ -5,7 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
-	"os"
+	// "os"
 	"time"
 
 	"github.com/emersion/go-smtp"
