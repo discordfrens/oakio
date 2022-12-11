@@ -17,6 +17,7 @@ func NewServer() {
 	// Since we will use this server for testing only, we can allow plain text
 	// authentication over unencrypted connections
 	s.AllowInsecureAuth = true
+	memory.New().Login(nil, "hi@bun.red", "password")
 	
 	log.Println("Starting IMAP server at localhost:1143")
 	if err := s.ListenAndServe(); err != nil {
