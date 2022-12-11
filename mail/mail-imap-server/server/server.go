@@ -9,7 +9,6 @@ import (
 
 func NewServer() {
 	be := memory.New()
-	be.Login(nil, "hi@bun.red", "password")
 	s := server.New(be)
 	s.Addr = ":1143"
 	s.AllowInsecureAuth = true

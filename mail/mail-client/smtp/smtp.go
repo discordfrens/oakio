@@ -11,7 +11,7 @@ import (
 
 func Client() {
 	fmt.Println("SMTP Client:")
-	auth := sasl.NewPlainClient("", "username", "password")
+	auth := sasl.NewPlainClient("", "hi@bun.red", "password")
 	to := []string{
 		"saigeeees@gmail.com",
 	}
