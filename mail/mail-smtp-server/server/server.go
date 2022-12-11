@@ -5,6 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
+	"os"
 	"time"
 
 	"github.com/emersion/go-smtp"
@@ -65,6 +66,7 @@ func NewServer() {
 	s.MaxMessageBytes = 1024 * 1024
 	s.MaxRecipients = 50
 	s.AllowInsecureAuth = true
+	s.Debug = os.Stdout
 
 	log.Println("Starting server at", s.Addr)
 	if err := s.ListenAndServe(); err != nil {
